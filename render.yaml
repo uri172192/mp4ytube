@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: video-downloader-privat
+    runtime: docker
+    plan: free
+    healthCheckPath: /health
+    envVars:
+      - key: APP_PASSWORD
+        sync: false
+      - key: SESSION_SECRET
+        generateValue: true
