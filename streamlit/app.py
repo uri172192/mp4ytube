@@ -70,6 +70,7 @@ def options(height, folder, hook, deno, sample=False):
         'js_runtimes': {'deno': {'path': deno}},
         'socket_timeout': 30, 'retries': 2, 'extractor_retries': 2,
         'progress_hooks': [hook], 'quiet': True, 'no_warnings': False,
+        'external_downloader_args': {'ffmpeg': ['-loglevel', 'error']},
         'match_filter': lambda info, *, incomplete: 'No s’admeten emissions en directe.' if info.get('is_live') else None,
     }
     if sample:
